@@ -53,4 +53,3 @@ $route['default_controller'] = 'tampilan';
 $route['admin'] = 'auth/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-

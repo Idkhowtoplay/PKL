@@ -14,12 +14,12 @@ class layanan extends CI_Controller
             redirect('auth/blocked');
         }
     }
-
     public function surat()
     {
         $data['title'] = 'Surat';
-        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-        $data['surat'] = $this->M_layanan->surat_get();
+        $data['user'] = $this->db->get_where('user', ['username' =>
+        $this->session->userdata('username')])->row_array();
+        $data['surat'] = $this->m_layanan->surat_get();
 
         $this->load->view('template/header', $data);
         $this->load->view('template/sidebar', $data);
@@ -27,9 +27,13 @@ class layanan extends CI_Controller
         $this->load->view('layanan/surat/index', $data);
         $this->load->view('template/footer');
     }
-
     public function surat_edit()
     {
+        // $data['title'] = 'Surat';
+        // $data['user'] = $this->db->get_where('user', ['username' =>
+        // $this->session->userdata('username')])->row_array();
+        // $data['surat'] = $this->m_layanan->surat_get();
+
         $id = $this->input->post('id');
 
         $data = [
@@ -46,17 +50,6 @@ class layanan extends CI_Controller
         $this->db->update('surat');
 
         $this->session->set_flashdata('surat', '<div class="alert alert-success" role="alert"> Surat berhasil diajukan!</div>');
-        redirect('Admin/data/layanan/surat');
-    }
-    public function delete_surat($id)
-    {
-        $surat = $this->M_layanan->surat_get_id($id);
-        if ($surat) {
-            $this->M_layanan->surat_delete($id, $surat['file']); // Assuming 'file' is the correct column name for the file path
-            $this->session->set_flashdata('surat', '<div class="alert alert-success" role="alert">Surat berhasil di haapus!</div>');
-        } else {
-            $this->session->set_flashdata('surat', '<div class="alert alert-danger" role="alert">Surat not found!</div>');
-        }
         redirect('Admin/data/layanan/surat');
     }
 }
