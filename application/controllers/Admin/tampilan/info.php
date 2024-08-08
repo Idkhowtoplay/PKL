@@ -329,9 +329,9 @@ class info extends CI_Controller
             redirect('Admin/tampilan/info/sarana');
         }
     }
-    public function delete_sarana($id, $gambar)
+    public function delete_sarana($id)
     {
-        $this->M_info->sarana_delete($id, $gambar);
+        $this->M_info->sarana_delete($id);
         $this->session->set_flashdata('sarana', '<div class="alert alert-success" role="alert"> sarana Berhasil di Hapus!</div>');
         redirect('Admin/tampilan/info/sarana');
     }

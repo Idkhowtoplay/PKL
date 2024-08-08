@@ -23,7 +23,7 @@ class M_home extends CI_Model
             if ($this->upload->do_upload('image')) {
                 $new_image = $this->upload->data('file_name');
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         $data = [
@@ -55,7 +55,7 @@ class M_home extends CI_Model
                 $new_image = $this->upload->data('file_name');
                 $this->db->set('image', $new_image);
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         $this->db->set('date_modif', time());
@@ -96,7 +96,7 @@ class M_home extends CI_Model
                 $new_image = $this->upload->data('file_name');
                 $this->db->set('photo', $new_image);
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         $data = [
@@ -137,7 +137,7 @@ class M_home extends CI_Model
                 $new_image = $this->upload->data('file_name');
                 $this->db->set('gambar', $new_image);
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         $upload_video = $_FILES['video']['name'];
@@ -160,7 +160,7 @@ class M_home extends CI_Model
                 $new_video = $this->upload->data('file_name');
                 $this->db->set('video', $new_video);
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         $data = [

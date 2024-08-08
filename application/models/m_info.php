@@ -342,7 +342,7 @@ class M_info extends CI_Model
         $this->db->where('id', $id);
         $this->db->update('sarana');
     }
-    function sarana_delete($id, $gambar)
+    function sarana_delete($id)
     {
         unlink(FCPATH . 'assets/img/sarana/' . $gambar);
 
