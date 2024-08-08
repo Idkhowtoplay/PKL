@@ -277,7 +277,7 @@ class data extends CI_Controller
 
         $this->form_validation->set_rules('nama', 'nama', 'required|trim');
         $this->form_validation->set_rules('kategori', 'kategori', 'required|trim');
-        // $this->form_validation->set_rules('dokumen', 'dokumen', 'required|trim');
+        $this->form_validation->set_rules('dokumen', 'dokumen', 'required|trim');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('template/header', $data);

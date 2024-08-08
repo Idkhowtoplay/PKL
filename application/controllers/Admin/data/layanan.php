@@ -52,8 +52,8 @@ class layanan extends CI_Controller
     {
         $surat = $this->M_layanan->surat_get_id($id);
         if ($surat) {
-            $this->M_layanan->surat_delete($id, $surat['file']); // Assuming 'file' is the correct column name for the file path
-            $this->session->set_flashdata('surat', '<div class="alert alert-success" role="alert">Surat berhasil di haapus!</div>');
+            $this->M_layanan->surat_delete($id, $surat['file']); 
+            $this->session->set_flashdata('surat', '<div class="alert alert-success" role="alert">Surat berhasil di hapus!</div>');
         } else {
             $this->session->set_flashdata('surat', '<div class="alert alert-danger" role="alert">Surat not found!</div>');
         }
