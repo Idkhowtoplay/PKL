@@ -157,7 +157,7 @@
                 <div class="col-lg-8 offset-lg-2 text-center">
                     <div class="section-title">
                         <h3><span class="orange-text">Berita</span> Kependudukan</h3>
-                        <p>Berita yang disediakan seputar kegiatan dan juga agenda kelurahan Jayawaras</p>
+                        <p>Berita yang disediakan seputar kegiatan dan juga agenda kelurahan Pakuwon</p>
                     </div>
                 </div>
             </div>
@@ -201,7 +201,7 @@
                 <div class="col-lg-8 offset-lg-2 text-center">
                     <div class="section-title">
                         <h3><span class="orange-text">Berita</span> Penghargaan</h3>
-                        <p>Penghargaan Yang DiDapatkan juga di peroleh oleh jayawas</p>
+                        <p>Penghargaan Yang DiDapatkan juga di peroleh oleh Pakuwon</p>
                     </div>
                 </div>
             </div>
