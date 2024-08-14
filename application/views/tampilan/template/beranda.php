@@ -13,7 +13,7 @@
                             <li class="main-header--one__top-contact-info-list-item">
                                 <div class="text">
                                     <h6>Absen Masuk</h6>
-                                    <p class="putih">07.00 - 07.30</p>
+                                    <p class="putih">08.00 - 08.30</p>
                                 </div>
                             </li>
                             <li class="main-header--one__top-contact-info-list-item">

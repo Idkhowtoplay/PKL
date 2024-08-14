@@ -41,12 +41,12 @@ class Surat extends CI_Controller
         $pdf->Ln(5);
         $pdf->Cell(19);
         $pdf->SetFont('Arial', 'B', 18);
-        $pdf->Cell(185, 2, 'KELURAHAN JAYAWARAS', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'KELURAHAN PAKUWON', 0, 1, 'C');
         $pdf->Ln(6);
         $pdf->Cell(19);
         $pdf->SetFont('Arial', '', 10);
         $pdf->SetFont('');
-        $pdf->Cell(185, 2, 'Jalan Gordah No.40 Kode Pos 44151', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'Jalan Mawar No.12 Kode Pos 44117', 0, 1, 'C');
         $pdf->Ln(2);
         $pdf->Cell(19);
         $pdf->Cell(180, 2, '', 0, 1, 'C');
@@ -63,7 +63,7 @@ class Surat extends CI_Controller
         $pdf->Ln(10);
         $pdf->Cell(12);
         $pdf->SetFont('Arial', '', 12);
-        $pdf->MultiCell(170, 7, '    Yang bertanda tangan di bawah ini Kepala Kelurahan Jayawaras Kecamatan Tarogong Kidul Kabupaten Garut, dengan ini menerangkan bahwa :', 0, 'J', FALSE);
+        $pdf->MultiCell(170, 7, '    Yang bertanda tangan di bawah ini Kepala Kelurahan Pakuwon Kecamatan Tarogong Kidul Kabupaten Garut, dengan ini menerangkan bahwa :', 0, 'J', FALSE);
         $pdf->Ln(5);
         $pdf->Cell(20);
         $pdf->Cell(10, 0, 'Nama', 0, 1);
@@ -122,7 +122,7 @@ class Surat extends CI_Controller
         $pdf->Cell(100, 0, $penduduk['alamat_spesifik'], 0, 10);
         $pdf->Ln(7);
         $pdf->Cell(12);
-        $pdf->MultiCell(170, 7, ' Berdasarkan surat pengantar dari Rt/Rw setempat bahwa benar orang tersebut di atas penduduk Kelurahan Jayawaras Kecamatan Tarogong Kidul Kabupaten Garut dan yang bersangkutan di atas saat ini berdomisili di alamat tersebut.', 0, 'J', FALSE);
+        $pdf->MultiCell(170, 7, ' Berdasarkan surat pengantar dari Rt/Rw setempat bahwa benar orang tersebut di atas penduduk Kelurahan Pakuwon Kecamatan Tarogong Kidul Kabupaten Garut dan yang bersangkutan di atas saat ini berdomisili di alamat tersebut.', 0, 'J', FALSE);
         $pdf->SetFont('Arial', 'B', '12');
         $pdf->SetFont('');
         $pdf->Ln(2);
@@ -135,7 +135,7 @@ class Surat extends CI_Controller
         $pdf->Cell(10, 6, 'Garut, ' . date('d F Y', strtotime($surat['tgl_pengambilan'])), 0, 0, 'L');
         $pdf->Ln();
         $pdf->Cell(115, 6, '', 0, 0, 'C');
-        $pdf->Cell(10, 6, 'Kepala Kelurahan Jayawaras,', 0, 0, 'L');
+        $pdf->Cell(10, 6, 'Kepala Kelurahan Pakuwon,', 0, 0, 'L');
         $pdf->Ln();
         $pdf->Ln(29);
         $pdf->SetFont('Arial', 'BU', '12');
@@ -182,12 +182,12 @@ class Surat extends CI_Controller
         $pdf->Ln(5);
         $pdf->Cell(19);
         $pdf->SetFont('Arial', 'B', 18);
-        $pdf->Cell(185, 2, 'KELURAHAN JAYAWARAS', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'KELURAHAN PAKUWON', 0, 1, 'C');
         $pdf->Ln(6);
         $pdf->Cell(19);
         $pdf->SetFont('Arial', '', 10);
         $pdf->SetFont('');
-        $pdf->Cell(185, 2, 'Jalan Gordah No.40 Kode Pos 44151', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'Jalan Mawar No.12 Kode Pos 44117', 0, 1, 'C');
         $pdf->Ln(2);
         $pdf->Cell(19);
         $pdf->Cell(180, 2, '', 0, 1, 'C');
@@ -204,7 +204,7 @@ class Surat extends CI_Controller
         $pdf->Ln(10);
         $pdf->Cell(12);
         $pdf->SetFont('Arial', '', 12);
-        $pdf->MultiCell(170, 7, '     Yang bertanda tangan di bawah ini Kepala Kelurahan Jayawaras Kecamatan Tarogong Kidul Kabupaten Garut, dengan ini menerangkan bahwa :', 0, 'J', FALSE);
+        $pdf->MultiCell(170, 7, '     Yang bertanda tangan di bawah ini Kepala Kelurahan Pakuwon Kecamatan Tarogong Kidul Kabupaten Garut, dengan ini menerangkan bahwa :', 0, 'J', FALSE);
         $pdf->Ln(5);
         $pdf->Cell(20);
         $pdf->Cell(10, 0, 'Nama', 0, 1);
@@ -264,7 +264,7 @@ class Surat extends CI_Controller
         $pdf->Cell(10, 0,  $penduduk['alamat_spesifik'], 0, 1);
         $pdf->Ln(7);
         $pdf->Cell(12);
-        $pdf->MultiCell(170, 7, '       Adalah benar Orang tersebut diatas penduduk Kelurahan Jayawaras Kecamatan tarogong kidul Kabupaten Garut,dan benar Orang tersebut mempunyai usaha ..........', 0, 'J', FALSE);
+        $pdf->MultiCell(170, 7, '       Adalah benar Orang tersebut diatas penduduk Kelurahan Pakuwon Kecamatan tarogong kidul Kabupaten Garut,dan benar Orang tersebut mempunyai usaha ..........', 0, 'J', FALSE);
         $pdf->SetFont('Arial', 'B', '12');
         $pdf->SetFont('');
         $pdf->Ln(2);
@@ -281,7 +281,7 @@ class Surat extends CI_Controller
         $pdf->Cell(10, 6, 'Garut, ', 0, 0, 'L');
         $pdf->Ln();
         $pdf->Cell(115, 6, '', 0, 0, 'C');
-        $pdf->Cell(10, 6, 'Kepala Kelurahan Jayawaras,', 0, 0, 'L');
+        $pdf->Cell(10, 6, 'Kepala Kelurahan Pakuwon,', 0, 0, 'L');
         $pdf->Ln();
         $pdf->Ln(29);
         $pdf->SetFont('Arial', 'BU', '12');
@@ -318,7 +318,7 @@ class Surat extends CI_Controller
         $pdf->Ln(5);
         $pdf->Cell(19);
         $pdf->SetFont('Arial', 'B', 18);
-        $pdf->Cell(185, 2, 'KELURAHAN JAYAWARAS', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'KELURAHAN PAKUWON', 0, 1, 'C');
         $pdf->Ln(6);
         $pdf->Cell(19);
         $pdf->SetFont('Arial', '', 10);
@@ -340,7 +340,7 @@ class Surat extends CI_Controller
         $pdf->Ln(10);
         $pdf->Cell(12);
         $pdf->SetFont('Arial', '', 12);
-        $pdf->MultiCell(170, 7, '     Yang bertanda tangan di bawah ini Kepala Kelurahan Jayawaras Kecamatan Tarogong Kidul Kabupaten Garut, dengan ini menerangkan bahwa :', 0, 'J', FALSE);
+        $pdf->MultiCell(170, 7, '     Yang bertanda tangan di bawah ini Kepala Kelurahan Pakuwon Kecamatan Tarogong Kidul Kabupaten Garut, dengan ini menerangkan bahwa :', 0, 'J', FALSE);
         $pdf->Ln(5);
         $pdf->Cell(20);
         $pdf->Cell(10, 0, 'Nama', 0, 1);
@@ -402,7 +402,7 @@ class Surat extends CI_Controller
         $pdf->Cell(102);
         $pdf->Ln(7);
         $pdf->Cell(12);
-        $pdf->MultiCell(170, 7, '       Adalah benar Penduduk Kelurahan Jayawaras Kecamatan Tarogong Kidul Kabupaten Garut,dan benar  Orang tersebut diatas sampai saat ini berkelakuan baik serta tidak pernah atau sedang berurusan dengan pihak berwajib.', 0, 'J', FALSE);
+        $pdf->MultiCell(170, 7, '       Adalah benar Penduduk Kelurahan Pakuwon Kecamatan Tarogong Kidul Kabupaten Garut,dan benar  Orang tersebut diatas sampai saat ini berkelakuan baik serta tidak pernah atau sedang berurusan dengan pihak berwajib.', 0, 'J', FALSE);
         $pdf->SetFont('Arial', 'B', '12');
         $pdf->SetFont('');
         $pdf->Ln(2);
@@ -420,7 +420,7 @@ class Surat extends CI_Controller
         $pdf->Cell(10, 6, 'Garut, ', 0, 0, 'L');
         $pdf->Ln(10);
         $pdf->Cell(115, 6, '', 0, 0, 'C');
-        $pdf->Cell(10, 6, 'Kepala Kelurahan Jayawaras,', 0, 0, 'L');
+        $pdf->Cell(10, 6, 'Kepala Kelurahan Pakuwon,', 0, 0, 'L');
         $pdf->Ln();
         $pdf->Ln(20);
         $pdf->SetFont('Arial', 'BU', '12');
@@ -451,7 +451,7 @@ class Surat extends CI_Controller
         $pdf->Ln(5);
         $pdf->Cell(19);
         $pdf->SetFont('Arial', 'B', 18);
-        $pdf->Cell(185, 2, 'KELURAHAN JAYAWARAS', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'KELURAHAN PAKUWON', 0, 1, 'C');
         $pdf->Ln(6);
         $pdf->Cell(19);
         $pdf->SetFont('Arial', '', 10);
@@ -473,7 +473,7 @@ class Surat extends CI_Controller
         $pdf->Ln(10);
         $pdf->Cell(12);
         $pdf->SetFont('Arial', '', 12);
-        $pdf->MultiCell(170, 7, '    Yang bertanda tangan di bawah ini Kepala Kelurahan Jayawaras Kecamatan Tarogong Kidul Kabupaten Garut, dengan ini menerangkan bahwa :', 0, 'J', FALSE);
+        $pdf->MultiCell(170, 7, '    Yang bertanda tangan di bawah ini Kepala Kelurahan Pakuwon Kecamatan Tarogong Kidul Kabupaten Garut, dengan ini menerangkan bahwa :', 0, 'J', FALSE);
         $pdf->Ln(5);
         $pdf->Cell(20);
         $pdf->Cell(10, 0, 'Nama', 0, 1);
@@ -529,7 +529,7 @@ class Surat extends CI_Controller
         $pdf->Cell(102);
         $pdf->Ln(7);
         $pdf->Cell(12);
-        $pdf->MultiCell(170, 7, '       Berdasarkan surat pengantar dari Rt/Rw setempat bahwa benar orang tersebut di atas penduduk Kelurahan Jayawaras Kecamatan Tarogong Kidul Kabupaten Garut dan benar berasa dari Keluarga Tidak Mampuh.', 0, 'J', FALSE);
+        $pdf->MultiCell(170, 7, '       Berdasarkan surat pengantar dari Rt/Rw setempat bahwa benar orang tersebut di atas penduduk Kelurahan Pakuwon Kecamatan Tarogong Kidul Kabupaten Garut dan benar berasa dari Keluarga Tidak Mampuh.', 0, 'J', FALSE);
         $pdf->SetFont('Arial', 'B', '12');
         $pdf->SetFont('');
         $pdf->Ln(2);
@@ -543,7 +543,7 @@ class Surat extends CI_Controller
         $pdf->Cell(10, 6, 'Garut, ', 0, 0, 'L');
         $pdf->Ln();
         $pdf->Cell(115, 6, '', 0, 0, 'C');
-        $pdf->Cell(10, 6, 'Kepala Kelurahan Jayawaras,', 0, 0, 'L');
+        $pdf->Cell(10, 6, 'Kepala Kelurahan Pakuwon,', 0, 0, 'L');
         $pdf->Ln();
         $pdf->Ln(20);
         $pdf->SetFont('Arial', 'BU', '12');
@@ -573,7 +573,7 @@ class Surat extends CI_Controller
         $pdf->Ln(5);
         $pdf->Cell(19);
         $pdf->SetFont('Arial', 'B', 18);
-        $pdf->Cell(185, 2, 'KELURAHAN JAYAWARAS', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'KELURAHAN Pakuwon', 0, 1, 'C');
         $pdf->Ln(6);
         $pdf->Cell(19);
         $pdf->SetFont('Arial', '', 10);
@@ -595,7 +595,7 @@ class Surat extends CI_Controller
         $pdf->Ln(10);
         $pdf->Cell(12);
         $pdf->SetFont('Arial', '', 12);
-        $pdf->MultiCell(170, 7, '    Yang bertanda tangan di bawah ini Kepala Kelurahan Jayawaras Kecamatan Tarogong Kidul Kabupaten Garut, dengan ini menerangkan bahwa :', 0, 'J', FALSE);
+        $pdf->MultiCell(170, 7, '    Yang bertanda tangan di bawah ini Kepala Kelurahan Pakuwon Kecamatan Tarogong Kidul Kabupaten Garut, dengan ini menerangkan bahwa :', 0, 'J', FALSE);
         $pdf->Ln(5);
         $pdf->Cell(20);
         $pdf->Cell(10, 0, 'hari', 0, 1);
@@ -699,7 +699,7 @@ class Surat extends CI_Controller
         $pdf->Cell(10, 6, 'Garut, ', 0, 0, 'L');
         $pdf->Ln(10);
         $pdf->Cell(115, 6, '', 0, 0, 'C');
-        $pdf->Cell(10, 6, 'Kepala Kelurahan Jayawaras,', 0, 0, 'L');
+        $pdf->Cell(10, 6, 'Kepala Kelurahan Pakuwon,', 0, 0, 'L');
         $pdf->Ln();
         $pdf->Ln(20);
         $pdf->SetFont('Arial', 'BU', '12');
@@ -732,7 +732,7 @@ class Surat extends CI_Controller
         $pdf->Ln(5);
         $pdf->Cell(19);
         $pdf->SetFont('Arial', 'B', 18);
-        $pdf->Cell(185, 2, 'KELURAHAN JAYAWARAS', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'KELURAHAN PAKUWON', 0, 1, 'C');
         $pdf->Ln(6);
         $pdf->Cell(19);
         $pdf->SetFont('Arial', '', 10);
@@ -754,7 +754,7 @@ class Surat extends CI_Controller
         $pdf->Ln(15);
         $pdf->Cell(12);
         $pdf->SetFont('Arial', '', 12);
-        $pdf->MultiCell(170, 7, '        Yang bertanda tangan di bawah ini Kepala Kelurahan Jayawaras Kecamatan Tarogong Kidul Kabupaten Garut, dengan ini menerangkan bahwa :', 0, 'J', FALSE);
+        $pdf->MultiCell(170, 7, '        Yang bertanda tangan di bawah ini Kepala Kelurahan Pakuwon Kecamatan Tarogong Kidul Kabupaten Garut, dengan ini menerangkan bahwa :', 0, 'J', FALSE);
         $pdf->Ln(7);
         $pdf->Cell(20);
         $pdf->Cell(10, 0, 'Tempat Tanggal lahir', 0, 1);
@@ -818,7 +818,7 @@ class Surat extends CI_Controller
         $pdf->Cell(10, 6, 'Garut, ', 0, 0, 'L');
         $pdf->Ln(10);
         $pdf->Cell(115, 6, '', 0, 0, 'C');
-        $pdf->Cell(10, 6, 'Kepala Kelurahan Jayawaras,', 0, 0, 'L');
+        $pdf->Cell(10, 6, 'Kepala Kelurahan Pakuwon,', 0, 0, 'L');
         $pdf->Ln();
         $pdf->Ln(7);
         $pdf->SetFont('Arial', 'BU', '12');

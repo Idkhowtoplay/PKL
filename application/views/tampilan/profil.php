@@ -29,7 +29,7 @@
                             <i class="fa fa-briefcase"></i>
                         </div>
                         <span class="time open-sans-font text-uppercase">Visi</span>
-                        <h5 class="poppins-font text-uppercase">Visi Jayawaras</h5>
+                        <h5 class="poppins-font text-uppercase">Visi Pakuwon</h5>
                         <?= $profile['visi'] ?>
                     </li>
                 </ul>
@@ -43,7 +43,7 @@
                             <i class="fa fa-graduation-cap"></i>
                         </div>
                         <span class="time open-sans-font text-uppercase">Misi</span>
-                        <h5 class="poppins-font text-uppercase">Misi Jayawaras</h5>
+                        <h5 class="poppins-font text-uppercase">Misi Pakuwon</h5>
                         <?= $profile['misi'] ?>
                     </li>
                 </ul>
@@ -57,7 +57,7 @@
                             <i class="fa fa-graduation-cap"></i>
                         </div>
                         <span class="time open-sans-font text-uppercase">Tujuan</span>
-                        <h5 class="poppins-font text-uppercase">Tujuan Jayawaras</h5>
+                        <h5 class="poppins-font text-uppercase">Tujuan Pakuwom</h5>
                         <?= $profile['tujuan'] ?>
                     </li>
                 </ul>
