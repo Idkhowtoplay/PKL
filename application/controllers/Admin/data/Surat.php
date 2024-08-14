@@ -132,7 +132,7 @@ class Surat extends CI_Controller
         $pdf->Cell(10, 0, '  Demikian Surat keterangan ini dibuat untuk dipergunakan sebagaimana mestinya', 0, 'J', FALSE);
         $pdf->Ln(12);
         $pdf->Cell(115);
-        $pdf->Cell(10, 6, 'Garut, ' . date('d F Y', strtotime($surat['tgl_pengambilan'])), 0, 0, 'L');
+        $pdf->Cell(10, 6, 'Garut, ' . date('d F Y'), 0, 0, 'L');
         $pdf->Ln();
         $pdf->Cell(115, 6, '', 0, 0, 'C');
         $pdf->Cell(10, 6, 'Kepala Kelurahan Pakuwon,', 0, 0, 'L');
@@ -278,7 +278,7 @@ class Surat extends CI_Controller
         $pdf->SetFont('');
         $pdf->Ln(2);
         $pdf->Cell(115);
-        $pdf->Cell(10, 6, 'Garut, ', 0, 0, 'L');
+        $pdf->Cell(10, 6, 'Garut, ' . date('d F Y'), 0, 0, 'L');
         $pdf->Ln();
         $pdf->Cell(115, 6, '', 0, 0, 'C');
         $pdf->Cell(10, 6, 'Kepala Kelurahan Pakuwon,', 0, 0, 'L');
@@ -417,7 +417,7 @@ class Surat extends CI_Controller
         $pdf->SetFont('');
         $pdf->Ln(2);
         $pdf->Cell(115);
-        $pdf->Cell(10, 6, 'Garut, ', 0, 0, 'L');
+        $pdf->Cell(10, 6, 'Garut, ' . date('d F Y'), 0, 0, 'L');
         $pdf->Ln(10);
         $pdf->Cell(115, 6, '', 0, 0, 'C');
         $pdf->Cell(10, 6, 'Kepala Kelurahan Pakuwon,', 0, 0, 'L');
@@ -540,7 +540,7 @@ class Surat extends CI_Controller
         $pdf->Ln(12);
         $pdf->Cell(115);
 
-        $pdf->Cell(10, 6, 'Garut, ', 0, 0, 'L');
+        $pdf->Cell(10, 6, 'Garut, ' . date('d F Y'), 0, 0, 'L');
         $pdf->Ln();
         $pdf->Cell(115, 6, '', 0, 0, 'C');
         $pdf->Cell(10, 6, 'Kepala Kelurahan Pakuwon,', 0, 0, 'L');
@@ -696,7 +696,7 @@ class Surat extends CI_Controller
         $pdf->Ln(12);
         $pdf->Cell(115);
 
-        $pdf->Cell(10, 6, 'Garut, ', 0, 0, 'L');
+        $pdf->Cell(10, 6, 'Garut, ' . date('d F Y'), 0, 0, 'L');
         $pdf->Ln(10);
         $pdf->Cell(115, 6, '', 0, 0, 'C');
         $pdf->Cell(10, 6, 'Kepala Kelurahan Pakuwon,', 0, 0, 'L');
@@ -815,7 +815,7 @@ class Surat extends CI_Controller
         $pdf->Ln(12);
         $pdf->Cell(115);
 
-        $pdf->Cell(10, 6, 'Garut, ', 0, 0, 'L');
+        $pdf->Cell(10, 6, 'Garut, ' . date('d F Y'), 0, 0, 'L');
         $pdf->Ln(10);
         $pdf->Cell(115, 6, '', 0, 0, 'C');
         $pdf->Cell(10, 6, 'Kepala Kelurahan Pakuwon,', 0, 0, 'L');
