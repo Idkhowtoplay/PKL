@@ -59,7 +59,7 @@ class Surat extends CI_Controller
         $pdf->Cell(185, 2, 'SURAT KETERANGAN DOMISILI', 0, 1, 'C');
         $pdf->SetFont('Arial', '', 12);
         $pdf->Ln(3);
-        $pdf->Cell(185, 2, 'Nomor:474 / ' . $surat['nosurat'] . ' - KEL/XI/2022', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'Nomor:474 / ' . $surat['nosurat'] . ' - KEL/XI/2024', 0, 1, 'C');
         $pdf->Ln(10);
         $pdf->Cell(12);
         $pdf->SetFont('Arial', '', 12);
@@ -200,7 +200,7 @@ class Surat extends CI_Controller
         $pdf->Cell(185, 2, 'SURAT KETERANGAN USAHA', 0, 1, 'C');
         $pdf->SetFont('Arial', '', 12);
         $pdf->Ln(3);
-        $pdf->Cell(185, 2, 'Nomor:511 / ' . $surat['nosurat'] . ' - KEL/VIII/2022', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'Nomor:511 / ' . $surat['nosurat'] . ' - KEL/VIII/2024', 0, 1, 'C');
         $pdf->Ln(10);
         $pdf->Cell(12);
         $pdf->SetFont('Arial', '', 12);
@@ -323,7 +323,7 @@ class Surat extends CI_Controller
         $pdf->Cell(19);
         $pdf->SetFont('Arial', '', 10);
         $pdf->SetFont('');
-        $pdf->Cell(185, 2, 'Jalan Gordah No.40 Kode Pos 44151', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'Jalan Mawar No.12 Kode Pos 44117', 0, 1, 'C');
         $pdf->Ln(2);
         $pdf->Cell(19);
         $pdf->Cell(180, 2, '', 0, 1, 'C');
@@ -336,7 +336,7 @@ class Surat extends CI_Controller
         $pdf->Cell(185, 2, 'SURAT KETERANGAN KELAKUAN BAIK', 0, 1, 'C');
         $pdf->SetFont('Arial', '', 12);
         $pdf->Ln(3);
-        $pdf->Cell(185, 2, 'Nomor:474 /         -KEL/XI/2022', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'Nomor:474 /         -KEL/XI/2024', 0, 1, 'C');
         $pdf->Ln(10);
         $pdf->Cell(12);
         $pdf->SetFont('Arial', '', 12);
@@ -456,7 +456,7 @@ class Surat extends CI_Controller
         $pdf->Cell(19);
         $pdf->SetFont('Arial', '', 10);
         $pdf->SetFont('');
-        $pdf->Cell(185, 2, 'Jalan Gordah No.40 Kode Pos 44151', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'Jalan Mawar No.12 Kode Pos 44117', 0, 1, 'C');
         $pdf->Ln(2);
         $pdf->Cell(19);
         $pdf->Cell(180, 2, '', 0, 1, 'C');
@@ -469,7 +469,7 @@ class Surat extends CI_Controller
         $pdf->Cell(185, 2, 'SURAT KETERANGAN TIDAK MAMPU', 0, 1, 'C');
         $pdf->SetFont('Arial', '', 12);
         $pdf->Ln(3);
-        $pdf->Cell(185, 2, 'Nomor:474 /         -KEL/XI/2022', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'Nomor:474 /         -KEL/XI/2024', 0, 1, 'C');
         $pdf->Ln(10);
         $pdf->Cell(12);
         $pdf->SetFont('Arial', '', 12);
@@ -578,7 +578,7 @@ class Surat extends CI_Controller
         $pdf->Cell(19);
         $pdf->SetFont('Arial', '', 10);
         $pdf->SetFont('');
-        $pdf->Cell(185, 2, 'Jalan Gordah No.40 Kode Pos 44151', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'Jalan Mawar No.12 Kode Pos 44117', 0, 1, 'C');
         $pdf->Ln(2);
         $pdf->Cell(19);
         $pdf->Cell(180, 2, '', 0, 1, 'C');
@@ -591,7 +591,7 @@ class Surat extends CI_Controller
         $pdf->Cell(185, 2, 'SURAT KETERANGAN KELAHIRAN', 0, 1, 'C');
         $pdf->SetFont('Arial', '', 12);
         $pdf->Ln(3);
-        $pdf->Cell(185, 2, 'Nomor:474.3 /         -KEL/X/2022', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'Nomor:474.3 /         -KEL/X/2024', 0, 1, 'C');
         $pdf->Ln(10);
         $pdf->Cell(12);
         $pdf->SetFont('Arial', '', 12);
@@ -737,7 +737,7 @@ class Surat extends CI_Controller
         $pdf->Cell(19);
         $pdf->SetFont('Arial', '', 10);
         $pdf->SetFont('');
-        $pdf->Cell(185, 2, 'Jalan Gordah No.40 Kode Pos 44151', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'Jalan Mawar No.12 Kode Pos 44117', 0, 1, 'C');
         $pdf->Ln(2);
         $pdf->Cell(19);
         $pdf->Cell(180, 2, '', 0, 1, 'C');
@@ -750,7 +750,7 @@ class Surat extends CI_Controller
         $pdf->Cell(185, 2, 'SURAT KETERANGAN KEMATIAN', 0, 1, 'C');
         $pdf->SetFont('Arial', '', 12);
         $pdf->Ln(3);
-        $pdf->Cell(185, 2, 'Nomor:474.3 /         -KEL/X/2022', 0, 1, 'C');
+        $pdf->Cell(185, 2, 'Nomor:474.3 /         -KEL/X/2024', 0, 1, 'C');
         $pdf->Ln(15);
         $pdf->Cell(12);
         $pdf->SetFont('Arial', '', 12);
