@@ -4,7 +4,9 @@
             <div class="main-header--one__top-inner clearfix">
                 <div class="main-header--one__top-left">
                     <div class="main-header--one__top-logo">
-                        <a href="<?= base_url('https://youtu.be/VRcOyxot8sw?si=Xw-oxDl01Tm2vdmC') ?>"><img src="<?= base_url('assets/img/bg/') ?>logo.png" alt="" /></a>
+
+                        <a href="index.php"><img src="<?= base_url('assets/img/bg/') ?>logopakuwon.png" alt="" /></a>
+
                     </div>
                 </div>
                 <div class="main-header--one__top-right clearfix">
