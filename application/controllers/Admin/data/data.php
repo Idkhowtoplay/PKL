@@ -274,20 +274,18 @@ class data extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $data['kategori'] = $this->db->get('kategori_doc')->result_array();
     
-        // Add validation for 'jenis'
+
         $this->form_validation->set_rules('nama', 'Nama Dokumen', 'required|trim');
         $this->form_validation->set_rules('kategori', 'Kategori', 'required|trim');
         $this->form_validation->set_rules('jenis', 'Jenis', 'required|trim'); // New validation rule
     
         if ($this->form_validation->run() == false) {
-            // Load the views if validation fails
             $this->load->view('template/header', $data);
             $this->load->view('template/sidebar', $data);
             $this->load->view('template/topbar', $data);
             $this->load->view('data/doc/tambah', $data);
             $this->load->view('template/footer');
         } else {
-            // Call the model function to insert the data if validation passes
             $this->M_data->dokumen_input();
             $this->session->set_flashdata('dokumen', '<div class="alert alert-success" role="alert">Dokumen berhasil ditambahkan!</div>');
             redirect('Admin/data/data/dokumen');
