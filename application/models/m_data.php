@@ -152,7 +152,6 @@ class M_data extends CI_Model
     }
     public function dokumen_input()
     {
-        // Handling the file upload
         $upload_dokumen = $_FILES['dokumen']['name'];
         $new_dokumen = null;
     
@@ -173,17 +172,15 @@ class M_data extends CI_Model
             }
         }
     
-        // Prepare the data to be inserted into the database
+
         $data = [
-            'nama'          => htmlspecialchars($this->input->post('nama')), // From the select dropdown
-            'jenis'         => htmlspecialchars($this->input->post('jenis')), // The new 'jenis' field
-            'dokumen'       => $new_dokumen, // Uploaded file name
-            'kategori_id'   => $this->input->post('kategori'), // Selected category ID
-            'pengedit'      => htmlspecialchars($this->input->post('pengedit')), // The editor's name
-            'date_created'  => time() // Current timestamp
+            'nama'          => htmlspecialchars($this->input->post('nama')), 
+            'jenis'         => htmlspecialchars($this->input->post('jenis')), 
+            'dokumen'       => $new_dokumen, 
+            'kategori_id'   => $this->input->post('kategori'), 
+            'pengedit'      => htmlspecialchars($this->input->post('pengedit')), 
+            'date_created'  => time() 
         ];
-    
-        // Insert the data into the 'dokumen' table
         $this->db->insert('dokumen', $data);
     }
     
