@@ -150,34 +150,43 @@ class M_data extends CI_Model
                       ON `dokumen`.`kategori_id` = `kategori_doc`.`id`";
         return $this->db->query($query)->result_array();
     }
-    function dokumen_input()
+    public function dokumen_input()
     {
+        // Handling the file upload
         $upload_dokumen = $_FILES['dokumen']['name'];
-
+        $new_dokumen = null;
+    
         if ($upload_dokumen) {
-            $config['allowed_types'] = 'pdf||docx||doc';
+            $config['allowed_types'] = 'pdf|docx|doc';
             $config['max_size']      = '10240';
             $config['upload_path']   = './assets/file/doc';
             $config['remove_spaces'] = true;
             $config['encrypt_name']  = true;
-
+    
             $this->load->library('upload', $config);
-
+    
             if ($this->upload->do_upload('dokumen')) {
                 $new_dokumen = $this->upload->data('file_name');
             } else {
                 echo $this->upload->display_errors();
+                return;
             }
         }
+    
+        // Prepare the data to be inserted into the database
         $data = [
-            'nama'          => htmlspecialchars($this->input->post('nama')),
-            'dokumen'       => $new_dokumen,
-            'kategori_id'   => $this->input->post('kategori'),
-            'pengedit'      => htmlspecialchars($this->input->post('pengedit')),
-            'date_created'  => time()
+            'nama'          => htmlspecialchars($this->input->post('nama')), // From the select dropdown
+            'jenis'         => htmlspecialchars($this->input->post('jenis')), // The new 'jenis' field
+            'dokumen'       => $new_dokumen, // Uploaded file name
+            'kategori_id'   => $this->input->post('kategori'), // Selected category ID
+            'pengedit'      => htmlspecialchars($this->input->post('pengedit')), // The editor's name
+            'date_created'  => time() // Current timestamp
         ];
+    
+        // Insert the data into the 'dokumen' table
         $this->db->insert('dokumen', $data);
     }
+    
     function dokumen_delete($id, $dokumen)
     {
         unlink(FCPATH . 'assets/file/doc/' . $dokumen);
