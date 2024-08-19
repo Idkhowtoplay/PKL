@@ -4,7 +4,6 @@
             <!-- Page Heading -->
             <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
             <div class="row">
-                <!-- Pending Requests Card Example -->
                 <div class="col-lg-16">
                     <?= form_error('dokumen', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
 
@@ -12,7 +11,6 @@
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <!-- End of Main Content -->
 
                             <?= form_open_multipart('Admin/data/data/dokumen_add'); ?>
                             <input type="hidden" name="id">
@@ -22,7 +20,21 @@
                                 <input type="name" name="nama" class="form-control">
                                 <?= form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
                             </div>
+                            <div class="from-group">
                             <div class="form-group">
+    <label>Jenis Dokumen</label>
+    <select name="jenis" class="form-control">
+        <option value="">Select Jenis</option>
+        <option value="Jenis A">Jenis A</option>
+        <option value="Jenis B">Jenis B</option>
+        <option value="Jenis C">Jenis C</option>
+        <!-- Add more options as needed -->
+    </select>
+    <?= form_error('jenis', '<small class="text-danger pl-3">', '</small>'); ?>
+</div>
+
+                            </div>
+                            <!-- <div class="form-group">
                                 <label>Jenis Dokumen</label>
                                 <select name="kategori" id="kategori" class="form-control">
                                     <option value="">Select Kategori</option>
@@ -31,7 +43,7 @@
                                     <?php endforeach; ?>
                                 </select>
                                 <?= form_error('kategori', '<small class="text-danger pl-3">', '</small>'); ?>
-                            </div>
+                            </div> -->
                             <div class="form-group row">
                                 <div class="col-sm-10">Document</div>
                                 <div class="col-sm-12">

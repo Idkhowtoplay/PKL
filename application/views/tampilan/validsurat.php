@@ -63,7 +63,7 @@
                             <i class="ni business_briefcase-24 mr-2"></i>Lembaga<br>
                             <div class="text-center">
                                 <h5 class="ket-inf">
-                                    KELURAHAN JAYAWARAS
+                                    KELURAHAN PAKUWON
                                 </h5>
                             </div>
                         </div>

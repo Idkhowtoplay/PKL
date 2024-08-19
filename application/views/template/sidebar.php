@@ -6,7 +6,7 @@
         <div class="sidebar-brand-icon">
             <i class="fas fa-university "></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Jayawaras</div>
+        <div class="sidebar-brand-text mx-3">Pakuwon</div>
     </a>
 
 
