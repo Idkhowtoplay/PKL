@@ -243,7 +243,7 @@ var ArchCode = function(){
 				var menu = jQuery('.sticky-header');
 				if ($(window).scrollTop() > menu.offset().top) {
 					menu.addClass('is-fixed');
-					$('.site-header .container > .logo-header .logo').attr('src','images/logo1.png');
+					$('.site-header .container > .logo-header .logo').attr('src','images/logo.png');
 					$('.site-header .container > .logo-header .logo-2').attr('src','error-404.html');
 					$('.site-header .container > .logo-header .logo-3').attr('src','error-404.html');
 				} else {
