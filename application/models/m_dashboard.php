@@ -139,6 +139,10 @@ class M_dashboard extends CI_Model
     {
         return $this->db->get_where('pekerjaan', ['nama_pekerjaan' => 'Pelajar/Mahasiswa'])->num_rows();
     }
+    function pekerjaan_getWhereBK()
+    {
+        return $this->db->get_where('kategori_sarana', ['nama_kategori' => 'Bidang Kelurahan' ])->num_rows();
+    }
     function pendidikan($kat)
     {
         $this->db->select('*');

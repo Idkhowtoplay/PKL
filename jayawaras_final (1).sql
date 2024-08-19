@@ -80,7 +80,8 @@ INSERT INTO `dokumen` (`id`, `nama`, `jenis`, `dokumen`, `pengedit`, `kategori_i
 (8, 'Surat Keterangan Domisili', 'domisili', NULL, 'Admin', 1, 0),
 (12, 'Surat Keterangan Kematian', 'kematian', NULL, 'Admin', 1, 0),
 (13, 'Surat Keterangan Kelahiran', 'kelahiran', NULL, 'Admin', 1, 0),
-(14, 'Surat Keterangan Pindah', 'pindah', NULL, 'Admin', 1, 0);
+(14, 'Surat Keterangan Pindah', 'pindah', NULL, 'Admin', 1, 0),
+(15, 'Surat Keterangan Menikah', 'keluarga', NULL, 'Admin', 1, 0);
 
 -- --------------------------------------------------------
 

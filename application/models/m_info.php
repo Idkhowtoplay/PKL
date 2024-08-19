@@ -22,7 +22,7 @@ class M_info extends CI_Model
             if ($this->upload->do_upload('image')) {
                 $new_image = $this->upload->data('file_name');
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         $data = [
@@ -55,7 +55,7 @@ class M_info extends CI_Model
                 $new_image = $this->upload->data('file_name');
                 $this->db->set('gambar', $new_image);
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         $data = [
@@ -95,7 +95,7 @@ class M_info extends CI_Model
             if ($this->upload->do_upload('image')) {
                 $new_image = $this->upload->data('file_name');
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         $data = [
@@ -126,7 +126,7 @@ class M_info extends CI_Model
                 $new_image = $this->upload->data('file_name');
                 $this->db->set('gambar', $new_image);
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         $data = [
@@ -166,7 +166,7 @@ class M_info extends CI_Model
             if ($this->upload->do_upload('image')) {
                 $new_image = $this->upload->data('file_name');
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         $buka = $this->input->post('hari_buka');
@@ -210,7 +210,7 @@ class M_info extends CI_Model
                 $new_image = $this->upload->data('file_name');
                 $this->db->set('gambar', $new_image);
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         $data = [
@@ -257,7 +257,7 @@ class M_info extends CI_Model
             if ($this->upload->do_upload('image')) {
                 $new_image = $this->upload->data('file_name');
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         $data = [
@@ -290,7 +290,7 @@ class M_info extends CI_Model
                 $new_image = $this->upload->data('file_name');
                 $this->db->set('gambar', $new_image);
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         $data = [
@@ -345,7 +345,6 @@ class M_info extends CI_Model
     function sarana_delete($id)
     {
         
-
         $this->db->where('id', $id);
         $this->db->delete('sarana');
     }

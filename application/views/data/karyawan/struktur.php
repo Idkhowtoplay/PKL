@@ -21,7 +21,7 @@
                             </a>
                             <?= form_open_multipart('Admin/data/data/struktur_edit/' . $id); ?>
                             <!-- modal target tambah data -->
-                            <button type="submit" class="btn btn-primary float-right mb-0">Edit</button>
+                            <button type="submit" class="btn btn-primary float-right mb-0">Save</button>
                             <!-- <button type="submit" class="btn btn-primary float-right mb-0" data-toggle="modal" data-target="#Edit<?= $id ?>">Edit</button> -->
                         </div>
                         <div class="card-body">

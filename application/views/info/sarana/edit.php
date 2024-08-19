@@ -36,7 +36,15 @@
                                     <label>Pilih Kategori</label>
                                     <select name="detail" id="detail" class="form-control">
                                         <option value="">-- Pilih Nama Kategori --</option>
+                                            <option value="">Pilih Jabatan</option>
+                                            <option value="Pendidikan">Pendidikan</option>
+                                            <option value="Kesehatan">Kesehatan</option>
+                                            <option value="Hiburan">Hiburan</option>
+                                            <option value="Umum">Umum</option>
+                                            <option value="Pemerintahan">Pemerintahan</option>
+                                        
                                         <?php foreach ($kategori as $m) : ?>
+                                            
                                             <option value="<?= $m['id']; ?>"><?= $m['nama_kategori']; ?></option>
                                         <?php endforeach; ?>
                                     </select>

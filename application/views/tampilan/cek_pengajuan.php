@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="alert alert-light" role="alert">
-                Fitur Login untuk melakukan cek terhadap progres surat yang diajukan <a href="Panduan.html" class="alert-link">LIHAT PANDUAN</a>.
+                Fitur Login untuk melakukan cek terhadap progres surat yang diajukan(Khusus Admin) <a href="<?= base_url('auth'); ?>" class="alert-link">LIHAT PANDUAN</a>.
             </div>
         </div>
     </div>

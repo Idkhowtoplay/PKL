@@ -14,7 +14,7 @@
                         <div class="card-body">
                             <div class="user-profile text-center">
                                 <div class="name"><?= $user['name'] ?></div>
-                                <div class="job">Kepala Desa</div>
+                                <div class="job">Color Fixer</div>
                                 <div class="desc">aksdja@gmail.com</div>
                                 <!-- <div class="social-media">
                                     <a class="btn btn-info btn-twitter btn-sm btn-link" href="#">
@@ -131,7 +131,7 @@
                                 </div>
                             </div>
                             <div class="text-right mt-3 mb-3">
-                                <button class="btn btn-success">Save</button>
+                            <a href="<?= base_url('Admin/dashboard/index') ?>" class="btn btn-secondary">Rocinante</a>
                                 <button class="btn btn-danger">Reset</button>
                             </div>
                         </div>

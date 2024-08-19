@@ -122,7 +122,7 @@ class M_frontend extends CI_Model
             if ($this->upload->do_upload('kk')) {
                 $new_kk = $this->upload->data('file_name');
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         // upload kk
@@ -139,7 +139,7 @@ class M_frontend extends CI_Model
             if ($this->upload->do_upload('ktp')) {
                 $new_ktp = $this->upload->data('file_name');
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         // upload pengantar
@@ -156,7 +156,7 @@ class M_frontend extends CI_Model
             if ($this->upload->do_upload('pengantar')) {
                 $new_pengantar = $this->upload->data('file_name');
             } else {
-                echo $this->upload->dispay_errors();
+                echo $this->upload->display_errors();
             }
         }
         $data = [

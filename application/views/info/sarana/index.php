@@ -44,9 +44,6 @@
                                                 <td><?= date('d F Y', $b['date_created']); ?></td>
                                                 <td><?= date('d F Y', $b['date_modify']); ?></td>
                                                 <td>
-                                                    <a href="<?= base_url('Admin/tampilan/info/sarana_edit/') . $id ?>" class="btn btn-success">
-                                                        <div class="fas fa-edit"></div>
-                                                    </a>
                                                     <a href="<?= base_url('Admin/tampilan/info/delete_sarana/' . $id) ?>" class="btn btn-danger">
                                                         <div class="fas fa-fw fa-trash-alt "></div>
                                                     </a>
