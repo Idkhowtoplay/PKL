@@ -4,7 +4,8 @@
             <div class="main-header--one__top-inner clearfix">
                 <div class="main-header--one__top-left">
                     <div class="main-header--one__top-logo">
-                        <a href="<?= base_url('https://youtu.be/VRcOyxot8sw?si=Xw-oxDl01Tm2vdmC') ?>"><img src="<?= base_url('assets/img/bg/') ?>logo.png" alt="" /></a>
+                    <a href="https://youtu.be/AJdTBPuZkHU?si=Zs-1O_I-AVj92WcG"><img src="<?= base_url('assets/img/bg/') ?>logo1.png" alt="" /></a>
+
                     </div>
                 </div>
                 <div class="main-header--one__top-right clearfix">
