@@ -133,7 +133,7 @@ class tampilan extends CI_Controller
     public function panduan()
     {
         $data['title'] = 'Panduan';
-        $data['header'] = 'panduan.png';
+        $data['header'] = 'panduan.jpeg';
 
         $this->load->view('tampilan/template/header', $data);
         $this->load->view('tampilan/template/navbar', $data);
