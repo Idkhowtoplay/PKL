@@ -72,16 +72,17 @@
 
                 <?php foreach ($penduduk as $p) :
                 ?>
+                <?php if (!isset($is_pdf) || !$is_pdf): ?>
                     <div class="modal fade" id="read<?= $p->id ?>" tabindex="-1" aria-labelledby="readLabel" aria-hidden="true">
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="readLabel">Detail Penduduk</h5>
-                                    <?php if (!isset($is_pdf) || !$is_pdf): ?>
+                                    
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
-                                    <?php endif; ?>
+                                    
                                 </div>
                                 <div class="modal-body">
                                     <div class="form-group">
@@ -185,6 +186,7 @@
                             </div>
                         </div>
                     </div>
+                <?php endif; ?>
                 <?php endforeach ?>
             </div>
         </div>
