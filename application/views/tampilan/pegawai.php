@@ -5,8 +5,8 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2 text-center">
                 <div class="section-title">
-                    <h3><span class="orange-text">Pegawai</span> Jayawaras</h3>
-                    <p>Pegawai - Pegawai yang bekerja di kelurahan Jayawaras</p>
+                    <h3><span class="orange-text">Pegawai</span> Pakuwon</h3>
+                    <p>Pegawai - Pegawai yang bekerja di kelurahan Pakuwon</p>
                 </div>
             </div>
         </div>

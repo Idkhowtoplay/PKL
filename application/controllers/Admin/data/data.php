@@ -271,14 +271,14 @@ class data extends CI_Controller
     public function dokumen_add()
     {
         $data['title'] = 'Tambah Dokumen';
-        $data['user'] = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
-        $data['kategori']   = $this->db->get('kategori_doc')->result_array();
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['kategori'] = $this->db->get('kategori_doc')->result_array();
+    
 
-        $this->form_validation->set_rules('nama', 'nama', 'required|trim');
-        $this->form_validation->set_rules('kategori', 'kategori', 'required|trim');
-        // $this->form_validation->set_rules('dokumen', 'dokumen', 'required|trim');
-
+        $this->form_validation->set_rules('nama', 'Nama Dokumen', 'required|trim');
+        $this->form_validation->set_rules('kategori', 'Kategori', 'required|trim');
+        $this->form_validation->set_rules('jenis', 'Jenis', 'required|trim'); // New validation rule
+    
         if ($this->form_validation->run() == false) {
             $this->load->view('template/header', $data);
             $this->load->view('template/sidebar', $data);
@@ -287,10 +287,11 @@ class data extends CI_Controller
             $this->load->view('template/footer');
         } else {
             $this->M_data->dokumen_input();
-            $this->session->set_flashdata('dokumen', '<div class="alert alert-success" role="alert"> dokumen Berhasil di Tambahkan!</div>');
+            $this->session->set_flashdata('dokumen', '<div class="alert alert-success" role="alert">Dokumen berhasil ditambahkan!</div>');
             redirect('Admin/data/data/dokumen');
         }
     }
+    
     public function delete_dokumen($id, $dokumen)
     {
         $this->M_data->dokumen_delete($id, $dokumen);

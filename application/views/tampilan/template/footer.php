@@ -7,7 +7,7 @@
                     <div class="col-md-4">
                         <div class="footer-alamat">
                             <h2>Alamat Kelurahan</h2>
-                            <p class="putih"><i class="fa fa-map-marker-alt"></i>Jl.Gordah No.40, Kel.Jayawaras, Kec.Tarogong kidul</p>
+                            <p class="putih"><i class="fa fa-map-marker-alt"></i>Jl. Mawar No.12, Kel. Pakuwon, Kec. Garut kota</p>
                             <div class="footer-social">
                                 <a href=""><i class="fab fa-twitter"></i></a>
                                 <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -19,9 +19,9 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="footer-newsletter">
-                            <h2>Jayawaras</h2>
+                            <h2>Pakuwon</h2>
                             <p class="putih">
-                                Kelurahan Jayawaras Membangun Desa Digital
+                                Kelurahan Pakuwon Membangun Desa Digital
                             </p>
                         </div>
                     </div>

@@ -130,9 +130,9 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2 text-center">
                 <div class="section-title">
-                    <h3><span class="orange-text">Video</span> Profil Jayawaras</h3>
-                    <p>video yang menggambarkan jalan Menuju Kelurahan Jayawaras<br>
-                        Jl.Gordah No.40, Kel.Jayawaras, Kec.Tarogong kidul</p>
+                    <h3><span class="orange-text">Video</span> Profil Pakuwon</h3>
+                    <p>video yang menggambarkan jalan Menuju Kelurahan Pakuwon<br>
+                        Jl. Mawar No.12, Kel.Pakuwon, Kec. Garut Kota</p>
 
                 </div>
             </div>

@@ -4,7 +4,12 @@
             <div class="main-header--one__top-inner clearfix">
                 <div class="main-header--one__top-left">
                     <div class="main-header--one__top-logo">
-                    <a href="https://youtu.be/AJdTBPuZkHU?si=Zs-1O_I-AVj92WcG"><img src="<?= base_url('assets/img/bg/') ?>logo1.png" alt="" /></a>
+
+                    <a href="https://youtu.be/AJdTBPuZkHU?si=Zs-1O_I-AVj92WcG"><img src="<?= base_url('assets/img/bg/') ?>logopakuwon.png" alt="" /></a>
+
+
+
+
 
                     </div>
                 </div>
@@ -14,7 +19,7 @@
                             <li class="main-header--one__top-contact-info-list-item">
                                 <div class="text">
                                     <h6>Absen Masuk</h6>
-                                    <p class="putih">07.00 - 07.30</p>
+                                    <p class="putih">08.00 - 08.30</p>
                                 </div>
                             </li>
                             <li class="main-header--one__top-contact-info-list-item">

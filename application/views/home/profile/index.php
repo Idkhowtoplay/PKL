@@ -47,7 +47,7 @@
                                                             <i class="fa fa-briefcase"></i>
                                                         </div>
                                                         <span class="time open-sans-font text-uppercase">Visi</span>
-                                                        <h5 class="poppins-font text-uppercase">Visi Jayawaras</h5>
+                                                        <h5 class="poppins-font text-uppercase">Visi Pakuwon</h5>
                                                         <?= $isi['visi'] ?>
                                                     </li>
                                                 </ul>
@@ -61,7 +61,7 @@
                                                             <i class="fa fa-graduation-cap"></i>
                                                         </div>
                                                         <span class="time open-sans-font text-uppercase">Misi</span>
-                                                        <h5 class="poppins-font text-uppercase">Misi Jayawaras</h5>
+                                                        <h5 class="poppins-font text-uppercase">Misi Pakuwon</h5>
                                                         <?= $isi['misi'] ?>
                                                     </li>
                                                 </ul>
@@ -75,7 +75,7 @@
                                                             <i class="fa fa-graduation-cap"></i>
                                                         </div>
                                                         <span class="time open-sans-font text-uppercase">Tujuan</span>
-                                                        <h5 class="poppins-font text-uppercase">Tujuan Jayawaras</h5>
+                                                        <h5 class="poppins-font text-uppercase">Tujuan Pakuwon</h5>
                                                         <?= $isi['tujuan'] ?>
                                                     </li>
                                                 </ul>
@@ -89,7 +89,7 @@
                                                             <i class="fa fa-briefcase"></i>
                                                         </div>
                                                         <span class="time open-sans-font text-uppercase">Sejarah</span>
-                                                        <h5 class="poppins-font text-uppercase">Sejarah Jayawaras</h5>
+                                                        <h5 class="poppins-font text-uppercase">Sejarah Pakuwon</h5>
                                                         <?= $isi['sejarah'] ?>
                                                     </li>
                                                 </ul>
