@@ -64,4 +64,5 @@ class M_penduduk extends CI_Model
         $this->db->where('id', $id);
         $this->db->delete('penduduk');
     }
+   
 }
