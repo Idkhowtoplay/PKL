@@ -414,4 +414,44 @@ class info extends CI_Controller
             role="alert">Delete Success!</div>');
         redirect('Admin/tampilan/info/kategori');
     }
+    public function surat_add()
+{
+    // Memuat library Pdfgenerator
+    $this->load->library('pdfgenerator');
+
+    // Ambil data dari model
+    $data['penduduk'] = $this->m_penduduk->get_data();
+
+    // Tetapkan jumlah data per PDF
+    $batch_size = 200; // Jumlah data per PDF
+    $total_data = count($data['penduduk']);
+
+    // Loop untuk membagi data menjadi beberapa PDF
+    for ($i = 0; $i < $total_data; $i += $batch_size) {
+        // Ambil subset data untuk PDF ini
+        $batch_data = array_slice($data['penduduk'], $i, $batch_size);
+        
+        // Set title PDF untuk batch ini
+        $data['title'] = "Data Penduduk - Bagian " . ($i / $batch_size + 1);
+        $data['penduduk'] = $batch_data; // Set data batch untuk view
+        
+        // Generate PDF
+        $file_pdf = $data['title'];
+        $paper = 'A4';
+        $orientation = "landscape";
+        
+        // Load HTML dengan data batch dari view 'data/penduduk/index'
+        $data['is_pdf'] = true;
+        $html = $this->load->view('data/penduduk/index', $data, true);
+        
+        // Generate PDF dengan Pdfgenerator
+        $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation);
+    }
+}
+
+    
+
+    
+
+
 }
