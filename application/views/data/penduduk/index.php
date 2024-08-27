@@ -7,14 +7,30 @@
                 <!-- Pending Requests Card Example -->
                 <div class="col-lg">
                     <?= form_error('penduduk', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+                    
+                    <?php if ($this->session->flashdata('penduduk')): ?>
+                        <div class="alert alert-success">
+                            <?php echo $this->session->flashdata('penduduk'); ?>
+                        </div>
+                    <?php endif; ?>
 
-                    <?= $this->session->flashdata('penduduk'); ?>
+                    <?php if ($this->session->flashdata('import_success')): ?>
+                        <div class="alert alert-success">
+                            <?php echo $this->session->flashdata('import_success'); ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if ($this->session->flashdata('import_error')): ?>
+                        <div class="alert alert-danger">
+                            <?php echo $this->session->flashdata('import_error'); ?>
+                        </div>
+                    <?php endif; ?>
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <!-- modal target tambah data -->
                             <a href="<?= base_url('Admin/data/penduduk/tambah_data'); ?>" class="btn btn-primary float-right mb-0 ml-2 "><i class="fas fa-plus">Tambah Penduduk</i></a>
-                            <a href="<?= base_url('Admin/tampilan/info/surat_add'); ?>" class="btn btn-outline-success float-right mb-0 ml-2" data-toggle="modal"><i class="fas fa-file-excel">Import Excel</i></a>
+                            <a href="<?= base_url('Admin/data/penduduk/tambah'); ?>" class="btn btn-outline-success float-right mb-0 ml-2"><i class="fas fa-file-pdf"> Import Penduduk</i></a>
                             <a href="<?= base_url('Admin/tampilan/info/surat_add'); ?>" class="btn btn-outline-danger float-right mb-0 " data-toggle="modal"><i class="fas fa-file-pdf">Export PDF</i></a>
                         </div>
                         <div class="card-body">
