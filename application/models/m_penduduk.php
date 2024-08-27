@@ -64,11 +64,13 @@ class M_penduduk extends CI_Model
         $this->db->where('id', $id);
         $this->db->delete('penduduk');
     }
+
     public function insert_batch($data)
 {
     $this->db->insert_batch('penduduk', $data);
-echo $this->db->last_query();
+
 
 }
+
 
 }

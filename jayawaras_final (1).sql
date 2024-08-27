@@ -1369,7 +1369,8 @@ INSERT INTO `user` (`id_user`, `name`, `username`, `image`, `password`, `id_type
 (10, 'Agus Kusnadi', 'agus', 'default.jpg', '$2y$10$XhsdO/UqY0QJ5HOr.9eDzeSWQWiMTmqh1ROER4n4LiKJpDcqq9X7S', 2, 1, 1651119734),
 (9, 'agung', 'agung', 'default.jpg', '$2y$10$EH6z6Eb2M07B/Z7Nj6Yt2uSnicsMUjM/88A/1PQtJwpaUcBuR3QK6', 2, 1, 1651117955),
 (11, 'admin1', 'admin1', 'default.jpg', '$2y$10$9OaPfv/IXMi7ht9EOkSwU.YtIHa37VyboZaot7pGGUvfw6dafLAXG', 1, 1, 1659414524),
-(12, 'AGUS KUSNADI, SE', 'Jayawaras', 'default.jpg', '$2y$10$Ti8Mjrj6iQSAiWSP03Ki7.B6LFtrvzzK.4.V.m2jWtBd7Txzxdm3m', 1, 1, 1669098228);
+(12, 'AGUS KUSNADI, SE', 'Jayawaras', 'default.jpg', '$2y$10$Ti8Mjrj6iQSAiWSP03Ki7.B6LFtrvzzK.4.V.m2jWtBd7Txzxdm3m', 1, 1, 1669098228),
+(13, 'AmisYou, 'Ketua Guild', '455278629_122123970206343702_6152256681267006714_n.jpg', '$2y$10$4BRkCkkDbDRUmLmxh5Vp4OE5JZmpvWPEWN31lFGVugrKU.3/ooxS.', 2, 1, 1723778228);
 
 -- --------------------------------------------------------
 

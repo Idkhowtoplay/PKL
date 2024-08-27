@@ -31,7 +31,7 @@ class tampilan extends CI_Controller
     public function profil()
     {
         $data['title'] = 'Profil';
-        $data['header'] = 'profil.png';
+        $data['header'] = 'profil.jpeg';
         $data['profile'] = $this->M_frontend->profil_get();
 
         $this->load->view('tampilan/template/header', $data);
@@ -43,7 +43,7 @@ class tampilan extends CI_Controller
     public function wisata()
     {
         $data['title'] = 'wisata';
-        $data['header'] = 'wisata.png';
+        $data['header'] = 'wisata.jpeg';
         $data['wisata'] = $this->db->get('wisata')->result_array();
 
         $this->load->view('tampilan/template/header', $data);
@@ -55,7 +55,7 @@ class tampilan extends CI_Controller
     public function detail_wisata($id)
     {
         $data['title'] = 'wisata';
-        $data['header'] = 'wisata.png';
+        $data['header'] = 'wisata.jpeg';
         $data['wisata'] = $this->db->get_where('wisata', ['id' => $id])->result_array();
         $data['wisataall'] = $this->m_frontend->wisata();
         // $data['wisata'] = $this->m_frontend->wisata_getWhere()->row_array();
@@ -81,7 +81,7 @@ class tampilan extends CI_Controller
     public function penghargaan()
     {
         $data['title'] = 'Penghargaan';
-        $data['header'] = 'penghargaan.png';
+        $data['header'] = 'penghargaan.jpeg';
         $data['penghargaan'] = $this->db->get('penghargaan')->result_array();
 
         $this->load->view('tampilan/template/header', $data);
@@ -133,7 +133,7 @@ class tampilan extends CI_Controller
     public function panduan()
     {
         $data['title'] = 'Panduan';
-        $data['header'] = 'panduan.png';
+        $data['header'] = 'panduan.jpeg';
 
         $this->load->view('tampilan/template/header', $data);
         $this->load->view('tampilan/template/navbar', $data);
@@ -168,7 +168,7 @@ class tampilan extends CI_Controller
     public function geografis()
     {
         $data['title'] = 'Geografis';
-        $data['header'] = 'geografis.png';
+        $data['header'] = 'geografis.jpeg';
         $data['document'] = $this->M_frontend->dokumen_get();
 
         $this->load->view('tampilan/template/header', $data);

@@ -27,12 +27,15 @@
                     <?php endif; ?>
 
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
+                    <?php if (!isset($is_pdf) || !$is_pdf): ?>
+                        <div class="card-header py-3 no-print">
                             <!-- modal target tambah data -->
                             <a href="<?= base_url('Admin/data/penduduk/tambah_data'); ?>" class="btn btn-primary float-right mb-0 ml-2 "><i class="fas fa-plus">Tambah Penduduk</i></a>
+
                             <a href="<?= base_url('Admin/data/penduduk/tambah'); ?>" class="btn btn-outline-success float-right mb-0 ml-2"><i class="fas fa-file-pdf"> Import Penduduk</i></a>
                             <a href="<?= base_url('Admin/tampilan/info/surat_add'); ?>" class="btn btn-outline-danger float-right mb-0 " data-toggle="modal"><i class="fas fa-file-pdf">Export PDF</i></a>
                         </div>
+                    <?php endif; ?>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
@@ -43,7 +46,9 @@
                                             <th scope="col">Nama</th>
                                             <th scope="col">NO. KK</th>
                                             <th scope="col">Jenis Kelamin</th>
-                                            <th scope="col">Action</th>
+                                            <?php if (!isset($is_pdf) || !$is_pdf): ?>
+                                                <th scope="col">Action</th>
+                                            <?php endif; ?>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -56,6 +61,7 @@
                                                 <td><?= $p->nama ?></td>
                                                 <td><?= $p->no_kk ?></td>
                                                 <td><?= $p->jenis_kelamin; ?></td>
+                                            <?php if (!isset($is_pdf) || !$is_pdf): ?>
                                                 <td>
                                                     <a href="<?= base_url('Admin/data/penduduk/pendudukSesuaiKK/') . $p->no_kk ?>" class="btn btn-success">
                                                         <div class="fas fa-search"></div>
@@ -70,6 +76,7 @@
                                                         <div class="fas fa-fw fa-trash-alt "></div>
                                                     </a>
                                                 </td>
+                                            <?php endif; ?>
                                             </tr>
                                             <?php $i++; ?>
                                         <?php endforeach; ?>
@@ -82,14 +89,17 @@
 
                 <?php foreach ($penduduk as $p) :
                 ?>
+                <?php if (!isset($is_pdf) || !$is_pdf): ?>
                     <div class="modal fade" id="read<?= $p->id ?>" tabindex="-1" aria-labelledby="readLabel" aria-hidden="true">
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="readLabel">Detail Penduduk</h5>
+                                    
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
+                                    
                                 </div>
                                 <div class="modal-body">
                                     <div class="form-group">
@@ -185,12 +195,15 @@
                                         </div>
                                     </div>
                                 </div>
+                                <?php if (!isset($is_pdf) || !$is_pdf): ?>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 </div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
+                <?php endif; ?>
                 <?php endforeach ?>
             </div>
         </div>
