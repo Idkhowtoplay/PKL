@@ -181,4 +181,117 @@ class penduduk extends CI_Controller
             return TRUE;
         }
     }
+
+    public function tambah()
+    {
+        $data['title'] = 'Import Data';
+        $data['user'] = $this->db->get_where('user', ['username' =>
+        $this->session->userdata('username')])->row_array();
+        // Load tampilan template
+        $this->load->view('template/header', $data);
+        $this->load->view('template/sidebar', $data);
+        $this->load->view('template/topbar', $data);
+        $this->load->view('data/penduduk/import', $data);
+        $this->load->view('template/footer');
+    }
+    
+    public function import_data()
+    {
+
+    $this->load->library('upload');
+    $this->load->library('PHPExcel');
+
+    $config['upload_path'] = './uploads/';
+    $config['allowed_types'] = 'xlsx|xls';
+    $config['max_size'] = '10000'; 
+
+    $this->upload->initialize($config);
+
+    if (!$this->upload->do_upload('file_excel')) {
+        $error = $this->upload->display_errors();
+        $this->session->set_flashdata('import_error', $error);
+        redirect('Admin/data/penduduk');
+        return; 
+    }
+
+    $file_data = $this->upload->data();
+    $file_path = $file_data['full_path'];
+
+    $allowed_mime_types = [
+        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 
+        'application/vnd.ms-excel', 
+    ];
+
+    $file_mime = mime_content_type($file_path);
+
+    if (!in_array($file_mime, $allowed_mime_types)) {
+        $this->session->set_flashdata('import_error', 'File yang diunggah bukan file Excel.');
+        unlink($file_path); 
+        redirect('Admin/data/penduduk');
+        return;
+    }
+
+    try {
+
+        $object = PHPExcel_IOFactory::load($file_path);
+    } catch (Exception $e) {
+        $this->session->set_flashdata('import_error', 'Error loading file "' . $file_path . '": ' . $e->getMessage());
+        redirect('Admin/data/penduduk');
+        return;
+    }
+    
+        $data = [];
+    
+        $this->load->model('m_pekerjaan');
+        $pekerjaan_list = $this->m_pekerjaan->get_pekerjaan_list();
+
+        $normalized_pekerjaan_list = array_change_key_case(array_column($pekerjaan_list, 'id', 'nama'), CASE_LOWER);
+    
+        foreach ($object->getWorksheetIterator() as $worksheet) {
+            $highestRow = $worksheet->getHighestRow();
+            $highestColumn = $worksheet->getHighestColumn();
+    
+            for ($row = 2; $row <= $highestRow; $row++) { 
+                $nama_pekerjaan = strtolower(trim(htmlspecialchars($worksheet->getCellByColumnAndRow(13, $row)->getValue())));
+                $pekerjaan_id = $normalized_pekerjaan_list[$nama_pekerjaan] ?? null;
+    
+                $rowData = [
+                    'nama' => htmlspecialchars($worksheet->getCellByColumnAndRow(1, $row)->getValue()),
+                    'jenis_kelamin' => htmlspecialchars($worksheet->getCellByColumnAndRow(2, $row)->getValue()),
+                    'nik' => htmlspecialchars($worksheet->getCellByColumnAndRow(3, $row)->getValue()),
+                    'no_kk' => htmlspecialchars($worksheet->getCellByColumnAndRow(4, $row)->getValue()),
+                    'tanggal_lahir' => PHPExcel_Style_NumberFormat::toFormattedString($worksheet->getCellByColumnAndRow(5, $row)->getValue(), 'YYYY-MM-DD'),
+                    'tempat_lahir' => htmlspecialchars($worksheet->getCellByColumnAndRow(6, $row)->getValue()),
+                    'agama' => htmlspecialchars($worksheet->getCellByColumnAndRow(7, $row)->getValue()),
+                    'rt' => htmlspecialchars($worksheet->getCellByColumnAndRow(8, $row)->getValue()),
+                    'rw' => htmlspecialchars($worksheet->getCellByColumnAndRow(9, $row)->getValue()),
+                    'alamat_spesifik' => htmlspecialchars($worksheet->getCellByColumnAndRow(10, $row)->getValue()),
+                    'status_perkawinan' => htmlspecialchars($worksheet->getCellByColumnAndRow(11, $row)->getValue()),
+                    'status_pendidikan' => htmlspecialchars($worksheet->getCellByColumnAndRow(12, $row)->getValue()),
+                    'id_pekerjaan' => $pekerjaan_id, 
+                ];
+    
+                if (!empty(array_filter($rowData))) {
+                    $data[] = $rowData;
+                }
+            }
+        }
+    
+        if (empty($data)) {
+            $this->session->set_flashdata('import_error', 'Tidak ada data untuk di Import.');
+            redirect('Admin/data/penduduk/tambah');
+            return;
+        }
+    
+        // Save data to the database
+        $this->load->model('m_penduduk');
+        if ($this->m_penduduk->insert_batch($data)) {
+            $this->session->set_flashdata('import_success', 'Data berhasil diimpor');
+            redirect('Admin/data/penduduk');
+        } else {
+            $this->session->set_flashdata('import_error', 'import berhasil cuma ada data yang kosong mohon cek ulang data yang sudah masuk.');
+            redirect('Admin/data/penduduk');
+        }
+    }
+    
 }

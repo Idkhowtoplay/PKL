@@ -53,3 +53,6 @@ $route['default_controller'] = 'tampilan';
 $route['admin'] = 'auth/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['data/penduduk/tambah'] = 'Admin/data/penduduk/tambah';
+$route['data/penduduk/import_data'] = 'Admin/data/penduduk/import_data';
+
