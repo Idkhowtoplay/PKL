@@ -74,14 +74,17 @@ CREATE TABLE `dokumen` (
 --
 
 INSERT INTO `dokumen` (`id`, `nama`, `jenis`, `dokumen`, `pengedit`, `kategori_id`, `date_created`) VALUES
-(11, 'Surat Keterangan Tidak Mampu', 'sktm', NULL, 'Admin', 1, 0),
-(10, 'Surat Keterangan Kelakuan Baik', 'skkb', NULL, 'Admin', 1, 0),
-(9, 'Surat Keterangan Usaha', 'usaha', NULL, 'Admin', 1, 0),
-(8, 'Surat Keterangan Domisili', 'domisili', NULL, 'Admin', 1, 0),
-(12, 'Surat Keterangan Kematian', 'kematian', NULL, 'Admin', 1, 0),
-(13, 'Surat Keterangan Kelahiran', 'kelahiran', NULL, 'Admin', 1, 0),
-(14, 'Surat Keterangan Pindah', 'pindah', NULL, 'Admin', 1, 0),
-(15, 'Surat Keterangan Menikah', 'keluarga', NULL, 'Admin', 1, 0);
+(1, 'Surat Keterangan Tidak Mampu', 'sktm', NULL, 'Misr', 1, 0),
+(2, 'Surat Keterangan Kelakuan Baik', 'skkb', NULL, 'Misr', 1, 0),
+(3, 'Surat Keterangan Usaha', 'usaha', NULL, 'Misr', 1, 0),
+(4, 'Surat Keterangan Domisili', 'domisili', NULL, 'Misr', 1, 0),
+(5, 'Surat Keterangan Kematian', 'kematian', NULL, 'Misr', 1, 0),
+(6, 'Surat Keterangan Kelahiran', 'kelahiran', NULL, 'Misr', 1, 0),
+(7, 'Surat Keterangan Mutasi Pindah Penduduk', 'pindah', NULL, 'Misr', 1, 0),
+(8, 'Surat Keterangan Datang Penduduk', 'datang', NULL, 'Misr', 1, 0),
+(9, 'Surat Keterangan Serbaguna', 'serbaguna', NULL, 'Misr', 1, 0),
+(10, 'Surat Keterangan Pajak Bumi dan Bangunan', 'pajak', NULL, 'Misr', 1, 0),
+(11, 'Surat Izin Keramaian', 'keramaian', NULL, 'Misr', 3, 0);
 
 -- --------------------------------------------------------
 
@@ -155,8 +158,10 @@ CREATE TABLE `kategori_doc` (
 
 INSERT INTO `kategori_doc` (`id`, `kategori`) VALUES
 (1, 'Surat Keterangan'),
-(3, 'Peraturan'),
-(4, 'Surat Pemerintahan');
+(2, 'Surat Pengantar'),
+(3, 'Surat Izin'),
+(4, 'Peraturan'),
+(5, 'Surat Pemerintahan');
 
 -- --------------------------------------------------------
 
@@ -1370,7 +1375,8 @@ INSERT INTO `user` (`id_user`, `name`, `username`, `image`, `password`, `id_type
 (9, 'agung', 'agung', 'default.jpg', '$2y$10$EH6z6Eb2M07B/Z7Nj6Yt2uSnicsMUjM/88A/1PQtJwpaUcBuR3QK6', 2, 1, 1651117955),
 (11, 'admin1', 'admin1', 'default.jpg', '$2y$10$9OaPfv/IXMi7ht9EOkSwU.YtIHa37VyboZaot7pGGUvfw6dafLAXG', 1, 1, 1659414524),
 (12, 'AGUS KUSNADI, SE', 'Jayawaras', 'default.jpg', '$2y$10$Ti8Mjrj6iQSAiWSP03Ki7.B6LFtrvzzK.4.V.m2jWtBd7Txzxdm3m', 1, 1, 1669098228),
-(13, 'AmisYou, 'Ketua Guild', '455278629_122123970206343702_6152256681267006714_n.jpg', '$2y$10$4BRkCkkDbDRUmLmxh5Vp4OE5JZmpvWPEWN31lFGVugrKU.3/ooxS.', 2, 1, 1723778228);
+(13, 'AmisYou', 'Ketua Guild', '455278629_122123970206343702_6152256681267006714_n.jpg', '$2y$10$4BRkCkkDbDRUmLmxh5Vp4OE5JZmpvWPEWN31lFGVugrKU.3/ooxS.', 2, 1, 1723778228),
+(14, 'Misr', 'officer1', 'flower.jpeg', '$2y$10$AUsM3YD4c6xjaqMDDM3YzOai5w1JkN/r3.oMPJarThNPrwK4jlGLG', 1, 1, 1724723234);
 
 -- --------------------------------------------------------
 
